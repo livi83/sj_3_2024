@@ -15,13 +15,24 @@
             <img src="img/logo.png" height="40">
           </a>
         </div>
-      <nav class="main-nav">
-        <ul class="main-menu" id="main-menu">
-            <li><a href="index.html">Domov</a></li>
-            <li><a href="portfolio.html">Portfólio</a></li>
-            <li><a href="qna.html">Q&A</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+      <nav class="main-nav">        
+      
+       <ul class="main-menu" id="main-menu">
+
+       <?php
+            $pages = array('Domov'=>'index.php',
+            'Portfólio'=>'portfolio.php',
+            'Q&A'=>'qna.php',
+            'Kontakt'=>'kontakt.php'  
+            );
+            
+            foreach($pages as $page_name => $page_url){
+              echo('<li><a href = "'.$page_url.'">'.$page_name.'</a></li>');
+            }
+       ?>
         </ul>
+
+
         <a class="hamburger" id="hamburger">
             <i class="fa fa-bars"></i>
         </a>
