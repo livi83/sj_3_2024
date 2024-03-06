@@ -3,26 +3,30 @@
 ?>
     <main>
       <section class="slides-container">
-        <div class="slide fade">
-          <img src="img/carousel/carousel.jpg">
-          <div class="slide-text">
-            Prvý nadpis
-          </div>
-        </div>
-        
-        <div class="slide fade">
-          <img src="img/carousel/carousel2.jpg">
-          <div class="slide-text">
-            Druhý nadpis
-          </div>
-        </div>
-        
-        <div class="slide fade">
-          <img src="img/carousel/carousel3.jpg">
-          <div class="slide-text">
-            Tretí nadpis
-          </div>
-        </div>
+        <?php
+          $headings = array('Prvý nadpis','Druhý nadpis');
+          $img_folder = 'img/carousel/';
+          $img_files = glob($img_folder . '*.jpg');
+
+          for($i = 0; $i < count($img_files); $i++){
+            echo('<div class="slide fade">');
+            echo('<img src="'.$img_files[$i].'">');
+            echo('<div class="slide-text">');
+             //ak je počet nadpisov rovný počtu obrázkov 
+             if(count($headings) == count($img_files)){
+              //vypíšem i-ty obrázok
+              echo($headings[$i]);
+            }else{
+                if($i<count($headings)){
+                  echo($headings[$i]);
+                }
+            }
+            echo('</div>');
+            echo('</div>');
+          }    
+            
+        ?>
+       
         
         <a id="prev" class="prev">❮</a>
         <a id="next" class="next">❯</a>
