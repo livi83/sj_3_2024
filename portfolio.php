@@ -8,34 +8,23 @@
                 </div>
             </section>
               <section class="container">
-                <div class="row">
-                  <div class="col-25 portfolio text-white text-center" id="portfolio-1">
-                      Web stránka 1
-                  </div>
-                    <div class="col-25 portfolio text-white text-center" id="portfolio-2">
-                        Web stránka 2
-                    </div>
-                    <div class="col-25 portfolio text-white text-center" id="portfolio-3">
-                        Web stránka 3
-                    </div>
-                    <div class="col-25 portfolio text-white text-center" id="portfolio-4">
-                        Web stránka 4
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25 portfolio text-white text-center" id="portfolio-5">
-                        Web stránka 5
-                    </div>
-                    <div class="col-25 portfolio text-white text-center" id="portfolio-6">
-                        Web stránka 6
-                    </div>
-                    <div class="col-25 portfolio text-white text-center" id="portfolio-7">
-                        Web stránka 7
-                    </div>
-                    <div class="col-25 portfolio text-white text-center" id="portfolio-8">
-                        Web stránka 8
-                    </div>
-                </div>
+                <?php
+                    $n_rows = 2;
+                    $n_cols = 4;
+                    $n_portfolio = 1;
+                    for($i = 0; $i<$n_rows;$i++){
+                        echo('<div class="row">');
+                        //sem pôjde cyklus po stĺpcoch
+                        for($j = 0; $j<$n_cols;$j++){
+                            echo('<div class="col-25 portfolio text-white text-center" id="portfolio-'.$n_portfolio.'">');
+                            echo('Web stránka '.$n_portfolio);
+                            $n_portfolio++;
+                            echo('</div>');
+                        }
+                        echo('</div>');
+                    }
+                ?>
+             
             </section>   
 
         </main>
