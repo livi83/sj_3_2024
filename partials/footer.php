@@ -14,13 +14,12 @@
       <div class="col-25">
         <h4>Rýchle odkazy</h4>
         <?php
-            $pages = array('Domov'=>'index.php',
-            'Q&A'=>'qna.php',
-            'Kontakt'=>'kontakt.php'  
-            );
-            foreach($pages as $page_name => $page_url){
-                echo('<p><a href = "'.$page_url.'">'.$page_name.'</a></p>');
-            }
+           $pages = array('Domov'=>'index.php',
+           'Portfólio'=>'portfolio.php',
+           'Q&A'=>'qna.php',
+           'Kontakt'=>'kontakt.php'  
+           );
+           echo(generate_menu($pages));
         ?>
       </div>
       <div class="col-25">
@@ -32,9 +31,8 @@
       Created and designed by Lívia
     </div>
   </footer>
-
-    <script src="js/menu.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/accordion.js"></script>
+    <?php
+      add_scripts();
+    ?>
 </body>
 </html>
