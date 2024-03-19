@@ -14,7 +14,7 @@
       <div class="col-25">
         <h4>Rýchle odkazy</h4>
         <?php
-           $pages = array('Domov'=>'index.php',
+           $pages = array('Domov'=>'home.php',
            'Portfólio'=>'portfolio.php',
            'Q&A'=>'qna.php',
            'Kontakt'=>'kontakt.php'  

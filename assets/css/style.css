@@ -109,9 +109,12 @@ header{
 
 /*FOOTER*/
 
-footer p a{
+footer p a, li a{
   text-decoration: none;
   color:white;
+}
+footer li{
+  list-style:none;
 }
 @media screen and (max-width: 600px) {
   main{
