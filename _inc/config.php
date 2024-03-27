@@ -8,5 +8,7 @@ define('DATABASE', [
     'PASSWORD' => ''
 ]);
 
+require_once('classes/Menu.php');
+
 
 ?>

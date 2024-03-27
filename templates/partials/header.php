@@ -27,7 +27,10 @@
                 'Q&A'=>'qna.php',
                 'Kontakt'=>'kontakt.php'  
            );
-           echo(generate_menu($pages));
+           //echo(generate_menu($pages));
+           $menu_object  = new Menu($pages);
+           echo($menu_object->generate_menu());
+
         ?>
        
         </ul>
