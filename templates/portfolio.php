@@ -5,7 +5,9 @@ include('partials/header.php');
              <?php include('partials/banner.php');?>
               <section class="container">
                 <?php
-                    generate_portfolio(2,4);
+                    //generate_portfolio(2,4);
+                    $portfolio_object = new Portfolio();
+                    echo($portfolio_object->get_portfolio());
                 ?>
                
             </section>   
