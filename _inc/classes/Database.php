@@ -9,9 +9,9 @@
     
         protected $connection;
 
-        public function __construct(){
-            $this->connection = $this->db_connection();
-        }
+        //public function __construct(){
+            //$this->connection = $this->db_connection();
+        //}
         
         public function __destruct() {
             // Uzatvorenie spojenia s databázou
@@ -26,6 +26,8 @@
                                     $this->password
                                     );
                 $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+                $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+                
                 return $this->connection;
             }catch(PDOException $e){
                 return 0;

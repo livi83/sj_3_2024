@@ -12,12 +12,8 @@ include('partials/header.php');
     </section>
       <section class="container">
         <?php
-          $qna = array('Otázka 1' => 'Odpoveď 1',
-                       'Otázka 2' => 'Odpoveď 2',
-                       'Otázka 3' => 'Odpoveď 3',
-                       'Otázka 4' => 'Odpoveď 4',
-                      );
-          generate_qna($qna);
+          $qna_object = new Qna();
+          echo($qna_object->get_qna());
         ?>
       </section>
     </section>
