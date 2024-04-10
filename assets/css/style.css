@@ -116,6 +116,9 @@ footer p a, li a{
 footer li{
   list-style:none;
 }
+.admin-table tr td{
+  border:1px solid black;
+}
 @media screen and (max-width: 600px) {
   main{
     margin-top:0px;
