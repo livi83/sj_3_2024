@@ -11,6 +11,11 @@ include('partials/header.php');
                     $contact_object = new Contact();
                     $contacts = $contact_object->select();
                     echo '<table class="admin-table">';
+                    echo '<tr><th>Name</th>
+                              <th>Email</th>
+                              <th>Message</th>
+                              <th>Acceptance</th>
+                          </tr>';
                     foreach($contacts as $c){
                         echo '<tr>';
                         echo '<td>'.$c->name;'</td>';
