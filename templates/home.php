@@ -8,7 +8,7 @@
           $slider = new Slider();
           $slider->set_headings($headings);
           $slider->set_img_folder($img_folder);
-          $slider->generate_slides($headings, $img_folder);
+          echo($slider->generate_slides($headings, $img_folder));
         ?>
         
       <section class="container">
