@@ -9,7 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php 'Moj web | '. (basename($_SERVER["SCRIPT_NAME"], '.php'));?></title>
     <?php
-      add_stylesheet();
+      //add_stylesheet();
+      $page_name = basename($_SERVER["SCRIPT_NAME"], '.php');
+      $page_object = new Page();
+      $page_object->set_page_name($page_name);
+      echo($page_object->add_stylesheet());
     ?>
 </head>
 <body>
