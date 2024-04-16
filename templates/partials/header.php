@@ -1,6 +1,6 @@
 
 <?php
-  require('../_inc/functions.php');
+  require('../_inc/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
