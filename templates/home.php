@@ -5,7 +5,10 @@
         <?php
           $headings = array('Prvý nadpis', 'Druhý nadpis');
           $img_folder = '../assets/img/carousel/';
-          generate_slides($headings, $img_folder);
+          $slider = new Slider();
+          $slider->set_headings($headings);
+          $slider->set_img_folder($img_folder);
+          $slider->generate_slides($headings, $img_folder);
         ?>
         
       <section class="container">
