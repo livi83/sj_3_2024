@@ -1,5 +1,9 @@
 <?php
 include('partials/header.php');
+
+if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] != true){
+    header('Location: 404.php');
+}
 ?>
 <main>
     <section class="container">
@@ -10,11 +14,18 @@ include('partials/header.php');
                 <?php
                     $contact_object = new Contact();
                     $contacts = $contact_object->select();
+                    if(isset($_POST['delete_contact'])){
+                        $contact_id = $_POST['delete_contact'];
+                        $contact_object->delete($contact_id);
+                        header('Location: admin.php');
+                        exit();
+                    }
                     echo '<table class="admin-table">';
                     echo '<tr><th>Name</th>
                               <th>Email</th>
                               <th>Message</th>
                               <th>Acceptance</th>
+                              <th>Delete</th>
                           </tr>';
                     foreach($contacts as $c){
                         echo '<tr>';
@@ -22,6 +33,11 @@ include('partials/header.php');
                         echo '<td>'.$c->email;'</td>';
                         echo '<td>'.$c->message;'</td>';
                         echo '<td>'.$c->acceptance;'</td>';
+                        echo '<td>
+                                <form action="" method="POST">
+                                    <button type="submit" name="delete_contact" value="'.$c->id.'"'.'>Vymazať</button>
+                                </form>
+                             </td>';
                         echo '</tr>';
                     }
                         

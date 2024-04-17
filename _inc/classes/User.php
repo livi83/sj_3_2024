@@ -23,6 +23,7 @@
                 $n_rows = $query_run->rowCount();
                 if($n_rows == 1) {
                     // login je uspesny
+                    $_SESSION['logged_in'] = true;
                     return true;
                 } else {
                     return false;
