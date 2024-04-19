@@ -23,23 +23,19 @@
         function get_portfolio(){
             $portfolio = $this->select();
             $result = '';
-            for ($i=0;$i<count($portfolio);$i++){
-                $temp_i = $i+1;
-                if($temp_i%4==1){
-                    $result .= '<div class="row">';
-                    $result .= '<div class="col-25 portfolio text-white textcenter" style = "background-image: url(\''.$portfolio[$i]->image.'\');"'.'>';
-                    //$result .= '<a href = "">'.$portfolio[$i]->name.'</a>';
-                    $result .= '<a href="../templates/portfolio-single.php?id='.$portfolio[$i]->id.'">'.$portfolio[$i]->name.'</a>';
-                    $result .= '</div>';
+            for ($i = 0; $i < count($portfolio); $i++) {
+                $temp_i = $i + 1;
+                if ($temp_i % 4 == 1) {
+                    $result.= '<div class="row">';
                 }
-                else{
-                    $result .= '<div class="col-25 portfolio text-white textcenter" style = "background-image: url(\''.$portfolio[$i]->image.'\');"'.'>';
-                    //$result .= '<a href = "">'.$portfolio[$i]->name.'</a>';
-                    $result .= '<a href="../templates/portfolio-single.php?id='.$portfolio[$i]->id.'">'.$portfolio[$i]->name.'</a>';
-                    $result .= '</div>';
-                    $result .= '</div>';
+    
+                $result.= '<div class="col-25 portfolio text-white text-center" style="background-image: url(\''.$portfolio[$i]->image.'\');">';
+                $result.= '<a href="">'.$portfolio[$i]->name.'</a>';
+                $result.= '</div>';
+    
+                if ($temp_i % 4 == 0 || $temp_i == count($portfolio)) {
+                    $result.= '</div>'; // Close row after every four items or at the end
                 }
-             
             }
             return $result;
         }
