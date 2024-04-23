@@ -12,28 +12,9 @@
     background-color: rgba(255,255,255,0.5);
     background-blend-mode: lighten;
   }
-  #portfolio-1{
-    background-image: url('../img/portfolio/portfolio1.jpg');
+  .portfolio a {
+    color: white;
   }
-  #portfolio-2{
-    background-image: url('../img/portfolio/portfolio2.jpg');
+  .portfolio a:hover {
+    color: black;
   }
-  #portfolio-3{
-    background-image: url('../img/portfolio/portfolio3.jpg');
-  }
-  #portfolio-4{
-    background-image: url('../img/portfolio/portfolio4.jpg');
-  }
-  #portfolio-5{
-    background-image: url('../img/portfolio/portfolio5.jpg');
-  }
-  #portfolio-6{
-    background-image: url('../img/portfolio/portfolio6.jpg');
-  }
-  #portfolio-7{
-    background-image: url('../img/portfolio/portfolio7.jpg');
-  }
-  #portfolio-8{
-    background-image: url('../img/portfolio/portfolio8.jpg');
-  }
-  
