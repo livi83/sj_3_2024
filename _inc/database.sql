@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2024 at 07:07 PM
+-- Generation Time: Apr 23, 2024 at 08:09 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `webstranka_test`
+-- Database: `sj_3_2024`
 --
 
 -- --------------------------------------------------------
@@ -40,8 +40,8 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `name`, `email`, `message`, `acceptance`) VALUES
-(45, 'a@a.sk', 'a@a.sk', 'a@a.sk', 1),
-(50, '', 'b@b.sk', 'bbb', NULL);
+(56, 'Test', 'test@test.sk', 'Toto je testovacia správa', 1),
+(57, 'Test 2 ', 'test2@test.sk', 'Toto je druhá testovacia správa', 1);
 
 -- --------------------------------------------------------
 
@@ -61,11 +61,11 @@ CREATE TABLE `portfolio` (
 --
 
 INSERT INTO `portfolio` (`id`, `image`, `name`, `text`) VALUES
-(1, '/sablona_oop/assets/img/portfolio/portfolio1.jpg', 'Portfólio 1 ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in facilisis sapien. Ut dapibus eros eros, non tempor massa facilisis eu. Donec sit amet rhoncus metus. Proin eu urna a ipsum congue posuere. Vivamus vitae placerat ex. In gravida mollis efficitur. Donec tempus magna viverra tortor vulputate aliquam. Sed volutpat urna vel risus malesuada, id placerat erat efficitur. Quisque elementum eros ac leo eleifend, eget viverra est efficitur.'),
-(2, '/sablona_oop/assets/img/portfolio/portfolio2.jpg', 'Portfólio 2 ', 'Quisque id gravida metus. Etiam at orci leo. Fusce fermentum a tellus sed eleifend. Praesent et massa non mi interdum auctor ut id augue. Fusce hendrerit euismod tincidunt. Maecenas consectetur placerat imperdiet. Maecenas semper commodo viverra. Pellentesque non mollis nulla, et volutpat sapien. In ac convallis mauris. Praesent bibendum augue ut hendrerit ultrices. Maecenas sagittis neque id justo viverra, eget interdum odio finibus. Aliquam ac feugiat ipsum. Vestibulum luctus vulputate magna eget cursus. Suspendisse consequat diam libero, in ultricies odio porttitor sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec volutpat feugiat orci eu dignissim.'),
-(3, '/sablona_oop/assets/img/portfolio/portfolio1.jpg', 'Portfólio 1 ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in facilisis sapien. Ut dapibus eros eros, non tempor massa facilisis eu. Donec sit amet rhoncus metus. Proin eu urna a ipsum congue posuere. Vivamus vitae placerat ex. In gravida mollis efficitur. Donec tempus magna viverra tortor vulputate aliquam. Sed volutpat urna vel risus malesuada, id placerat erat efficitur. Quisque elementum eros ac leo eleifend, eget viverra est efficitur.'),
-(4, '/sablona_oop/assets/img/portfolio/portfolio2.jpg', 'Portfólio 2 ', 'Quisque id gravida metus. Etiam at orci leo. Fusce fermentum a tellus sed eleifend. Praesent et massa non mi interdum auctor ut id augue. Fusce hendrerit euismod tincidunt. Maecenas consectetur placerat imperdiet. Maecenas semper commodo viverra. Pellentesque non mollis nulla, et volutpat sapien. In ac convallis mauris. Praesent bibendum augue ut hendrerit ultrices. Maecenas sagittis neque id justo viverra, eget interdum odio finibus. Aliquam ac feugiat ipsum. Vestibulum luctus vulputate magna eget cursus. Suspendisse consequat diam libero, in ultricies odio porttitor sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec volutpat feugiat orci eu dignissim.'),
-(5, '/sablona_oop/assets/img/portfolio/portfolio2.jpg', 'Portfólio 2 ', 'Quisque id gravida metus. Etiam at orci leo. Fusce fermentum a tellus sed eleifend. Praesent et massa non mi interdum auctor ut id augue. Fusce hendrerit euismod tincidunt. Maecenas consectetur placerat imperdiet. Maecenas semper commodo viverra. Pellentesque non mollis nulla, et volutpat sapien. In ac convallis mauris. Praesent bibendum augue ut hendrerit ultrices. Maecenas sagittis neque id justo viverra, eget interdum odio finibus. Aliquam ac feugiat ipsum. Vestibulum luctus vulputate magna eget cursus. Suspendisse consequat diam libero, in ultricies odio porttitor sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec volutpat feugiat orci eu dignissim.');
+(1, '/sj_3_2024/assets/img/portfolio/portfolio1.jpg', 'Portfólio 1 ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in facilisis sapien. Ut dapibus eros eros, non tempor massa facilisis eu. Donec sit amet rhoncus metus. Proin eu urna a ipsum congue posuere. Vivamus vitae placerat ex. In gravida mollis efficitur. Donec tempus magna viverra tortor vulputate aliquam. Sed volutpat urna vel risus malesuada, id placerat erat efficitur. Quisque elementum eros ac leo eleifend, eget viverra est efficitur.'),
+(2, '/sj_3_2024/assets/img/portfolio/portfolio2.jpg', 'Portfólio 2 ', 'Quisque id gravida metus. Etiam at orci leo. Fusce fermentum a tellus sed eleifend. Praesent et massa non mi interdum auctor ut id augue. Fusce hendrerit euismod tincidunt. Maecenas consectetur placerat imperdiet. Maecenas semper commodo viverra. Pellentesque non mollis nulla, et volutpat sapien. In ac convallis mauris. Praesent bibendum augue ut hendrerit ultrices. Maecenas sagittis neque id justo viverra, eget interdum odio finibus. Aliquam ac feugiat ipsum. Vestibulum luctus vulputate magna eget cursus. Suspendisse consequat diam libero, in ultricies odio porttitor sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec volutpat feugiat orci eu dignissim.'),
+(3, '/sj_3_2024/assets/img/portfolio/portfolio3.jpg', 'Portfólio 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in facilisis sapien. Ut dapibus eros eros, non tempor massa facilisis eu. Donec sit amet rhoncus metus. Proin eu urna a ipsum congue posuere. Vivamus vitae placerat ex. In gravida mollis efficitur. Donec tempus magna viverra tortor vulputate aliquam. Sed volutpat urna vel risus malesuada, id placerat erat efficitur. Quisque elementum eros ac leo eleifend, eget viverra est efficitur.'),
+(4, '/sj_3_2024/assets/img/portfolio/portfolio4.jpg', 'Portfólio 4', 'Quisque id gravida metus. Etiam at orci leo. Fusce fermentum a tellus sed eleifend. Praesent et massa non mi interdum auctor ut id augue. Fusce hendrerit euismod tincidunt. Maecenas consectetur placerat imperdiet. Maecenas semper commodo viverra. Pellentesque non mollis nulla, et volutpat sapien. In ac convallis mauris. Praesent bibendum augue ut hendrerit ultrices. Maecenas sagittis neque id justo viverra, eget interdum odio finibus. Aliquam ac feugiat ipsum. Vestibulum luctus vulputate magna eget cursus. Suspendisse consequat diam libero, in ultricies odio porttitor sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec volutpat feugiat orci eu dignissim.'),
+(5, '/sj_3_2024/assets/img/portfolio/portfolio5.jpg', 'Portfólio 5', 'Quisque id gravida metus. Etiam at orci leo. Fusce fermentum a tellus sed eleifend. Praesent et massa non mi interdum auctor ut id augue. Fusce hendrerit euismod tincidunt. Maecenas consectetur placerat imperdiet. Maecenas semper commodo viverra. Pellentesque non mollis nulla, et volutpat sapien. In ac convallis mauris. Praesent bibendum augue ut hendrerit ultrices. Maecenas sagittis neque id justo viverra, eget interdum odio finibus. Aliquam ac feugiat ipsum. Vestibulum luctus vulputate magna eget cursus. Suspendisse consequat diam libero, in ultricies odio porttitor sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec volutpat feugiat orci eu dignissim.');
 
 -- --------------------------------------------------------
 
@@ -107,7 +107,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `role`) VALUES
-(1, 'admin@admin.sk', 'admin', 0);
+(1, 'admin@admin.sk', 'admin', 1),
+(2, 'user@user.sk', 'user', 0);
 
 --
 -- Indexes for dumped tables
@@ -145,7 +146,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `portfolio`
@@ -163,7 +164,7 @@ ALTER TABLE `qna`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
