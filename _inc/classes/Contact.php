@@ -62,5 +62,45 @@
                 echo $e->getMessage();
             }
         }
+
+        public function edit($contact_id, $new_data){
+            try{
+              // Zostavenie dát pre aktualizáciu
+              $data = array(
+                  'contact_id' => $contact_id,
+                  'contact_name' => $new_data['name'], // Predpokladáme, že máme pole $new_data s novými údajmi
+                  'contact_email' => $new_data['email'],
+                  'contact_message' => $new_data['message']
+              );
+              
+               $query = "UPDATE contact SET name = :contact_name, email = :contact_email, message = :contact_message WHERE id = :contact_id";
+               $query_run = $this->db->prepare($query);
+               $query_run->execute($data);
+               
+      
+            }catch(PDOException $e){
+              // Spracovanie chyby, ak nastane
+              echo $e->getMessage();
+            }
+        }
+
+        public function select_single($contact_id){
+            try {
+              $data = array('contact_id'=>$contact_id);
+              $query = "SELECT * FROM contact WHERE id = :contact_id";
+              $query_run = $this->db->prepare($query);
+              $query_run->execute($data);
+              
+              $contact_data = $query_run->fetch();
+              
+              return $contact_data; 
+
+          } catch(PDOException $e) {
+           
+              echo $e->getMessage();
+              
+          }
+        }
+  
     }
 ?>
